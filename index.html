@@ -287,16 +287,15 @@ header{
     border-color: rgba(50, 215, 75, 0.4);
 }
 
-/* Video adattivo senza zoom o tagli sui bordi */
+/* MODIFICATO: Risoluzione nativa verticale 9:16 senza bande nere e senza tagli completi */
 .card-video {
     width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: contain;
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
     border-radius: 14px;
     margin-bottom: 15px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    background: #000000;
+    background: transparent;
 }
 
 .card h3{
@@ -400,9 +399,6 @@ footer{
         <a class="btn" href="https://www.instagram.com/vesuviano__420" target="_blank">Instagram</a>
     </div>
 </header>
-
-<section class="section">
-</section>
 
 <section class="hero">
     <div class="image-wrapper">
