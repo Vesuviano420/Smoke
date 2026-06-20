@@ -271,6 +271,17 @@ header{
     border-color: rgba(50, 215, 75, 0.4);
 }
 
+/* Video Stile Integrato */
+.card-video {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: 16px;
+    margin-bottom: 18px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: #000;
+}
+
 .card h3{
     margin-bottom:15px;
     font-weight: 600;
@@ -331,10 +342,10 @@ header{
 
 /* Footer */
 footer{
-    padding:50px;
-    text-align:center;
-    color:#666;
-    border-top:1px solid rgba(255,255,255,.05);
+    padding: 50px;
+    text-align: center;
+    color: #666;
+    border-top: 1px solid rgba(255,255,255,.05);
     backdrop-filter: blur(10px);
     font-size: 0.9rem;
 }
@@ -387,6 +398,10 @@ footer{
     <h2 class="section-title">🍁 Weed</h2>
     <div class="grid">
         <div class="card">
+            <!-- Forzato caricamento streaming tramite raw.githubusercontent -->
+            <video class="card-video" autoplay loop muted playsinline poster="image_1cfa88.jpg">
+                <source src="https://raw.githubusercontent.com/Vesuviano420/Smoke/main/America1.mp4" type="video/mp4">
+            </video>
             <h3>🇺🇸 USA <span>REAL CREAM</span></h3>
             <ul class="price-list">
                 <li><span>4g 🍁</span> <span>50€</span></li>
@@ -398,6 +413,10 @@ footer{
             <span class="badge">Disponibile</span>
         </div>
         <div class="card">
+            <!-- Forzato caricamento streaming tramite raw.githubusercontent -->
+            <video class="card-video" autoplay loop muted playsinline poster="image_1cfa88.jpg">
+                <source src="https://raw.githubusercontent.com/Vesuviano420/Smoke/main/America1.mp4" type="video/mp4">
+            </video>
             <h3>🇺🇸 USA <span>NEW YORK</span></h3>
             <ul class="price-list">
                 <li><span>4g 🍁</span> <span>50€</span></li>
@@ -409,6 +428,10 @@ footer{
             <span class="badge">Disponibile</span>
         </div>
         <div class="card">
+            <!-- Forzato caricamento streaming tramite raw.githubusercontent -->
+            <video class="card-video" autoplay loop muted playsinline poster="image_1cfa88.jpg">
+                <source src="https://raw.githubusercontent.com/Vesuviano420/Smoke/main/Canada.mp4" type="video/mp4">
+            </video>
             <h3>🇨🇦 CANADA <span>BLUE GORILLA</span></h3>
             <ul class="price-list">
                 <li><span>4g 🍁</span> <span>40€</span></li>
