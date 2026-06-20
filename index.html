@@ -287,7 +287,7 @@ header{
     border-color: rgba(50, 215, 75, 0.4);
 }
 
-/* MODIFICATO: Risoluzione nativa verticale 9:16 senza bande nere e senza tagli completi */
+/* Risoluzione nativa verticale 9:16 senza bande nere e senza tagli completi */
 .card-video {
     width: 100%;
     aspect-ratio: 9 / 16;
@@ -513,21 +513,33 @@ footer{
     © 2026 VESUVIANO 420 • BUONA FUMATA FAMILY❌ 🍁
 </footer>
 
+<!-- SCRIPT AGGIORNATO PER SAFARI / IOS -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         const videos = document.querySelectorAll('.card-video');
         
-        function forcePlay() {
+        function forcePlayAll() {
             videos.forEach(video => {
-                if (video.paused) {
-                    video.play().catch(err => console.log("Autoplay mobile in attesa..."));
+                // Safari richiede esplicitamente che il video sia mutato via JS prima del play
+                video.muted = true;
+                video.setAttribute('muted', '');
+                
+                let playPromise = video.play();
+                if (playPromise !== undefined) {
+                    playPromise.catch(err => {
+                        console.log("Safari richiede un'interazione utente esplicita...");
+                    });
                 }
             });
         }
 
-        forcePlay();
-        window.addEventListener('touchstart', forcePlay, { passive: true });
-        window.addEventListener('scroll', forcePlay, { passive: true });
+        // Tenta l'avvio immediato al caricamento
+        forcePlayAll();
+
+        // Sblocca Safari non appena l'utente fa un tocco, uno scroll o muove lo schermo
+        ['touchstart', 'touchend', 'scroll', 'click'].forEach(eventType => {
+            window.addEventListener(eventType, forcePlayAll, { passive: true, once: false });
+        });
     });
 </script>
 
