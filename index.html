@@ -104,7 +104,6 @@ header{
     height:45px;
     border-radius:50%;
     object-fit:cover;
-    border: 1px solid rgba(255,255,255,0.2);
 }
 
 .logo h2{
@@ -178,8 +177,7 @@ header{
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
-    border: 2px solid rgba(255, 255, 255, 0.15);
-    filter: drop-shadow(0 0 40px rgba(255, 85, 0, 0.45));
+    filter: drop-shadow(0 0 30px rgba(255, 85, 0, 0.3));
 }
 
 .hero h1{
@@ -289,15 +287,16 @@ header{
     border-color: rgba(50, 215, 75, 0.4);
 }
 
-/* Video ottimizzato per dimensioni smartphone */
+/* Video adattivo senza zoom o tagli sui bordi */
 .card-video {
     width: 100%;
-    height: 160px;
-    object-fit: cover;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: contain;
     border-radius: 14px;
     margin-bottom: 15px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    background: #000;
+    background: #000000;
 }
 
 .card h3{
@@ -392,7 +391,7 @@ footer{
 
 <header>
     <div class="logo">
-        <img src="image_1cfa88.jpg" alt="VESUVIANO 420 Logo">
+        <img src="logo.png" alt="VESUVIANO 420 Logo">
         <h2>VESUVIANO 420 🍁</h2>
     </div>
 
@@ -402,9 +401,12 @@ footer{
     </div>
 </header>
 
+<section class="section">
+</section>
+
 <section class="hero">
     <div class="image-wrapper">
-        <img class="main-img" src="image_1cfa88.jpg" alt="VESUVIANO 420">
+        <img class="main-img" src="logo.png" alt="VESUVIANO 420">
     </div>
     
     <h1>VESUVIANO 420 🌿</h1>
@@ -442,7 +444,6 @@ footer{
             <span class="badge">Disponibile</span>
         </div>
         
-        <!-- Casella Weed modificata con america new york.mp4 -->
         <div class="card">
             <video class="card-video" autoplay loop muted playsinline preload="auto">
                 <source src="america new york.mp4" type="video/mp4">
@@ -480,7 +481,6 @@ footer{
 <section class="section">
     <h2 class="section-title">🍯 Hash</h2>
     <div class="grid">
-        <!-- Casella Mousse modificata con a breve disponibile -->
         <div class="card">
             <video class="card-video" autoplay loop muted playsinline preload="auto">
                 <source src="https://raw.githubusercontent.com/Vesuviano420/Smoke/main/Mousse.mp4" type="video/mp4">
@@ -493,10 +493,9 @@ footer{
                 <li><span>50g 🍫</span> <span>0€</span></li>
                 <li><span>100g 🍫</span> <span>0€</span></li>
             </ul>
-            <span class="badge">A breve disponibile</span>
+            <span class="badge">In arrivo gas ✈️</span>
         </div>
         
-        <!-- Casella DRY modificata con a breve disponibile -->
         <div class="card">
             <video class="card-video" autoplay loop muted playsinline preload="auto">
                 <source src="https://raw.githubusercontent.com/Vesuviano420/Smoke/main/Dry.mp4" type="video/mp4">
@@ -509,7 +508,7 @@ footer{
                 <li><span>50g 🍫</span> <span>0€</span></li>
                 <li><span>100g 🍫</span> <span>0€</span></li>
             </ul>
-            <span class="badge">A breve disponibile</span>
+            <span class="badge">In arrivo gas ✈️</span>
         </div>
     </div>
 </section>
